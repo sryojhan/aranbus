@@ -1,6 +1,6 @@
 //https://www.crtm.es/widgets/#/line/9__1__013_
 
-import { BusDataManager } from './scripts/bus-data.js'
+import { BusDataManager } from './scripts/read-bus-data.js'
 
 const DOM_current = document.querySelector('#current-bus');
 const DOM_previous = document.querySelector('#previous-bus');
