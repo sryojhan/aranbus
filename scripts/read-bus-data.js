@@ -54,7 +54,9 @@ const BusDataManager = (function () {
         const weekdays = parseDay(direction['laborales']);
         const weekend = parseDay(direction['festivos']);
 
-        return { laborales: weekdays, festivos: weekend };
+        const saturday =  direction.sabados ? parseDay(direction['sabados']) : undefined;
+
+        return { laborales: weekdays, festivos: weekend, sabados: saturday };
     }
 
     const parseRoute = function (routeName) {
@@ -63,6 +65,7 @@ const BusDataManager = (function () {
 
         const outbound = parseDirection(route['ida']);
         const inbound = parseDirection(route['vuelta']);
+
 
         return { origen: route['ida'].origen,destino: route['vuelta'].origen, ida: outbound, vuelta: inbound };
     }
@@ -116,7 +119,14 @@ const BusDataManager = (function () {
         return data[direction][day][idx + 1];
     }
 
-    return { loadJson, parseRoute, getNextBus, getNextBusFromHour, theOneBefore, theOneAfter };
+
+    const hasSaturday = function(data, direction){
+
+        console.log(data);
+        return data[direction].sabados !== undefined;
+    }
+
+    return { loadJson, parseRoute, getNextBus, getNextBusFromHour, theOneBefore, theOneAfter, hasSaturday };
 })();
 
 class Hour {

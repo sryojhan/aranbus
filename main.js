@@ -10,6 +10,9 @@ const DOM_nextnext = document.querySelector('#nextnext-bus');
 const DOM_origin = document.querySelector('#originLabel');
 const DOM_destination = document.querySelector('#destinationLabel');
 
+
+const DOM_saturdays = document.querySelector('#saturday-label');
+
 await BusDataManager.loadJson();
 
 
@@ -21,6 +24,23 @@ const loadRoute = function () {
 
     const data = BusDataManager.parseRoute(route);
 
+    if (BusDataManager.hasSaturday(data, direction)) {
+
+        DOM_saturdays.classList.remove('hidden');
+    }
+    else
+    {
+
+        if(day === 'sabados'){
+                
+            document.querySelector('#festivos').checked = true;
+            return loadRoute();
+        }
+
+        DOM_saturdays.classList.add('hidden');
+    }
+
+
     const current = BusDataManager.getNextBus(data, direction, day);
     const previous = BusDataManager.theOneBefore(data, direction, day, current);
     const next = BusDataManager.theOneAfter(data, direction, day, current);
@@ -29,7 +49,7 @@ const loadRoute = function () {
     DOM_current.textContent = current ? current.toString() : "";
     DOM_previous.textContent = previous ? previous.toString() : "";
 
-    DOM_next.textContent = next ? next.toString() : ""; 
+    DOM_next.textContent = next ? next.toString() : "";
     DOM_nextnext.textContent = nextnext ? nextnext?.toString() : "";
 
     DOM_origin.textContent = data.origen;
