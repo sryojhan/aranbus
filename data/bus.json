@@ -1,0 +1,67 @@
+{
+    "l1": {
+
+    },
+
+    "l2": {
+
+    },
+    "l3": {
+
+    },
+    "l4": {
+        "ida": {
+
+            "origen": "Estación de Aranjuez",
+
+            "laborales": [
+
+                {"esIntervalo": false, "hora": [5, 45], "especial": "Comienza en la calle Almibar"},
+                {"esIntervalo": true, "inicio": [6, 45], "fin": [21, 20], "intervalo": 25},
+                {"esIntervalo": false, "hora": [22, 10]},
+                {"esIntervalo": false, "hora": [23, 25]},
+                {"esIntervalo": false, "hora": [24, 45]}
+            ],
+
+            "festivos": [
+
+                {"esIntervalo": false, "hora": [5, 45], "especial": "Comienza en la calle Almibar"},
+                {"esIntervalo": true, "inicio": [6, 45], "fin": [14, 55], "intervalo": 35},
+                {"esIntervalo": true, "inicio": [16, 5], "fin": [23, 40], "intervalo": 35},
+                {"esIntervalo": false, "hora": [24, 40]}
+            ]
+        },
+        "vuelta":{
+
+            "origen": "Hospital del Tajo",
+
+            "laborales": [
+
+                {"esIntervalo": true, "inicio": [7, 7], "fin": [21, 42], "intervalo": 25},
+                {"esIntervalo": false, "hora": [22, 32]},
+                {"esIntervalo": false, "hora": [23, 47]},
+                {"esIntervalo": false, "hora": [25, 2]}
+            ],
+
+            "festivos": [
+
+                {"esIntervalo": true, "inicio": [7, 15], "fin": [15, 25], "intervalo": 35},
+                {"esIntervalo": true, "inicio": [16, 35], "fin": [24, 10], "intervalo": 35},
+                {"esIntervalo": false, "hora": [25, 10]}
+            ]
+        }
+    },
+    "l5": {
+
+    },
+    "423":{
+
+    },
+    "429": {
+
+    },
+    "430": {
+        
+    }
+    
+}

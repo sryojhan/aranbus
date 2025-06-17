@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aranbus</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <div class="radio">
+
+        <input type="radio" name="route" value="l1" id="l1">
+        <label for="l1">L1</label>
+      </div>
+
+      <div class="radio">
+
+        <input type="radio" name="route" value= "l2" id="l2">
+        <label for="l2">L2</label>
+      </div>
+
+      <div class="radio">
+
+
+        <input type="radio" name="route" value="l3" id="l3">
+        <label for="l3">L3</label>
+      </div>
+
+      <div class="radio">
+        <input type="radio" name="route" id="l4" value="l4" checked>
+        <label for="l4">L4</label>
+      </div>
+        
+
+      <div class="radio">
+        <input type="radio" name="route" id="l5" value="l5">
+        <label for="l5">L5</label>
+      </div>
+
+      <div class="radio">
+
+
+        <input type="radio" name="route" id="423" value="423">
+        <label for="423">423</label>
+      </div>
+
+      <div class="radio">
+
+        <input type="radio" name="route" id="429" value="429">
+        <label for="429">429</label>
+      </div>
+
+    </nav>
+
+    <div class="origen">
+      Salida:
+
+      <input type="radio" name="origin" id="origin" value="ida" checked>
+      <label for="origin" id="originLabel" >Estación</label>
+
+      <input type="radio" name="origin" id="destination" value="vuelta">
+      <label for="destination" id="destinationLabel" >Pau de la montaña</label>
+    </div>
+
+
+  </header>
+
+
+  <main>
+
+    <h1>Próximos</h1>
+
+    <div id="previous-bus" class="hour">16:20</div>
+    <div id="current-bus" class="main-hour">
+      16:45
+    </div>
+
+    <!-- TODO: Hacer bien la semantica de html -->
+    <div class="additional-hours">
+
+      <div id="next-bus" class="hour">17:00</div>
+      <div id="nextnext-bus" class="hour">17:25</div>
+
+    </div>
+
+
+    <div>
+
+      <h2>Horario completo</h2>
+
+      <div class="selector-dia">
+
+
+        <!-- TODO: hacer una tabla -->
+
+        <input type="radio" name="day" id="laboral" value="laborales" checked>
+        <label for="laboral">Lunes a viernes</label>
+        <input type="radio" name="day" id="festivo" value="festivo">
+        <label for="festivo">Domingos y festivos</label>
+
+      </div>
+
+
+    </div>
+
+
+
+  </main>
+
+
+  <footer>
+
+    Made by <a href="https://github.com/sryojhan">Yojhan</a>
+
+  </footer>
+
+
+  <script type="module" src="main.js"></script>
+</body>
+
+</html>
