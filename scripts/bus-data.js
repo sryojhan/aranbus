@@ -1,64 +1,3 @@
-class Hour {
-
-    constructor(hour, minutes) {
-
-        this.hour = hour;
-        this.minutes = minutes;
-    }
-
-    increment(minutes) {
-
-        this.minutes += minutes;
-
-        if (this.minutes > 60) {
-
-            this.minutes -= 60;
-            this.hour++;
-        }
-
-        return this;
-    }
-
-    toString() {
-
-        const hour24format = this.hour < 24 ? this.hour : this.hour - 24;
-
-        let h = this.hour.toString();
-
-        if (hour24format < 10) h = '0' + h;
-
-        let m = this.minutes;
-
-        if (this.minutes < 10) m = '0' + m;
-
-        return `${h}:${m}`;
-    }
-
-    /**
-     * @param {Hour} other 
-     * @returns {boolean}
-     */
-    isEarlier(other) {
-
-        if (this.hour > other.hour) return false;
-        if (this.hour < other.hour) return true;
-
-        if (this.minutes > other.minutes) return false;
-
-        return true;
-    }
-
-    clone() {
-
-        return new Hour(this.hour, this.minutes);
-    }
-
-    static Current() {
-
-        const now = new Date();
-        return new Hour(now.getHours(), now.getMinutes());
-    }
-}
 
 const BusDataManager = (function () {
 
@@ -66,7 +5,7 @@ const BusDataManager = (function () {
 
     const loadJson = async function () {
 
-        const jsonData = await fetch('../data/bus.json');
+        const jsonData = await fetch(window.location.pathname + '/data/bus.json');
         busData = await jsonData.json();
     }
 
@@ -174,6 +113,67 @@ const BusDataManager = (function () {
     return { loadJson, parseRoute, getNextBus, getNextBusFromHour, theOneBefore, theOneAfter };
 })();
 
+class Hour {
+
+    constructor(hour, minutes) {
+
+        this.hour = hour;
+        this.minutes = minutes;
+    }
+
+    increment(minutes) {
+
+        this.minutes += minutes;
+
+        if (this.minutes > 60) {
+
+            this.minutes -= 60;
+            this.hour++;
+        }
+
+        return this;
+    }
+
+    toString() {
+
+        const hour24format = this.hour < 24 ? this.hour : this.hour - 24;
+
+        let h = this.hour.toString();
+
+        if (hour24format < 10) h = '0' + h;
+
+        let m = this.minutes;
+
+        if (this.minutes < 10) m = '0' + m;
+
+        return `${h}:${m}`;
+    }
+
+    /**
+     * @param {Hour} other 
+     * @returns {boolean}
+     */
+    isEarlier(other) {
+
+        if (this.hour > other.hour) return false;
+        if (this.hour < other.hour) return true;
+
+        if (this.minutes > other.minutes) return false;
+
+        return true;
+    }
+
+    clone() {
+
+        return new Hour(this.hour, this.minutes);
+    }
+
+    static Current() {
+
+        const now = new Date();
+        return new Hour(now.getHours(), now.getMinutes());
+    }
+}
 
 
 export { BusDataManager, Hour };
