@@ -22,7 +22,7 @@
 
       <div class="radio">
 
-        <input type="radio" name="route" value= "l2" id="l2">
+        <input type="radio" name="route" value="l2" id="l2">
         <label for="l2">L2</label>
       </div>
 
@@ -37,7 +37,7 @@
         <input type="radio" name="route" id="l4" value="l4" checked>
         <label for="l4">L4</label>
       </div>
-        
+
 
       <div class="radio">
         <input type="radio" name="route" id="l5" value="l5">
@@ -58,15 +58,26 @@
     </nav>
 
     <div class="origen">
-      Salida:
-
       <input type="radio" name="origin" id="origin" value="ida" checked>
-      <label for="origin" id="originLabel" >Estación</label>
+      <label for="origin" id="originLabel">Estación</label>
 
       <input type="radio" name="origin" id="destination" value="vuelta">
-      <label for="destination" id="destinationLabel" >Pau de la montaña</label>
+      <label for="destination" id="destinationLabel">Pau de la montaña</label>
     </div>
 
+
+    <div class="selector-dia">
+
+      <input type="radio" name="day" id="laboral" value="laborales" checked>
+      <label for="laboral">Lunes a viernes</label>
+
+      <input type="radio" name="day" id="sabados" value="sabados">
+      <label for="sabados">Sábados</label>
+
+      <input type="radio" name="day" id="festivo" value="festivos">
+      <label for="festivo">Domingos y festivos</label>
+
+    </div>
 
   </header>
 
@@ -91,19 +102,8 @@
 
     <div>
 
-      <h2>Horario completo</h2>
+      <!-- <h2>Horario completo</h2> -->
 
-      <div class="selector-dia">
-
-
-        <!-- TODO: hacer una tabla -->
-
-        <input type="radio" name="day" id="laboral" value="laborales" checked>
-        <label for="laboral">Lunes a viernes</label>
-        <input type="radio" name="day" id="festivo" value="festivos">
-        <label for="festivo">Domingos y festivos</label>
-
-      </div>
 
 
     </div>
