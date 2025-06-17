@@ -188,6 +188,7 @@
                 {"esIntervalo": true, "inicio": [6, 15], "fin": [15, 15], "intervalo": 30},
                 {"esIntervalo": true, "inicio": [15, 15], "fin": [24, 15], "intervalo": 60}
             ],
+
             "festivos": [
 
                 {"esIntervalo": true, "inicio": [6, 15], "fin": [24, 15], "intervalo": 60}
@@ -223,7 +224,15 @@
             ],
 
             "sabados": [
-
+                {"esIntervalo": true, "inicio": [6, 35], "fin": [8, 35], "intervalo": 30},
+                {"esIntervalo": true, "inicio": [9, 0], "fin": [15, 0], "intervalo": 20},
+                {"hora": [15, 40]},
+                {"hora": [16, 0]},
+                {"hora": [16, 40]},
+                {"hora": [17, 0]},
+                {"esIntervalo": true, "inicio": [17, 35], "fin": [23, 35], "intervalo": 30},
+                {"hora": [24, 10]},
+                {"hora": [24, 40]}
             ],
 
             "festivos": [
