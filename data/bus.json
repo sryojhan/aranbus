@@ -244,6 +244,7 @@
         },
         "vuelta":{
 
+            "origen": "Residencia",
             "horario-verano": true,
             "laborales": [
 
