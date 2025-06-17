@@ -318,14 +318,26 @@
         },
         "vuelta":{
 
-            "origen": "Hospital del Tajo",
+            "origen": "Glorieta de la Música",
 
             "laborales": [
 
-                {"esIntervalo": true, "inicio": [7, 7], "fin": [21, 42], "intervalo": 25},
-                {"esIntervalo": false, "hora": [22, 32]},
-                {"esIntervalo": false, "hora": [23, 47]},
-                {"esIntervalo": false, "hora": [25, 2]}
+                {"esIntervalo": true, "inicio": [5, 40], "fin": [23, 40], "intervalo": 20},
+                {"hora": [24, 10]}
+            ],
+
+            "sabados":[
+
+                {"hora": [6, 25]},
+                {"hora": [6, 45]},
+                {"hora": [7, 5]},
+                {"hora": [7, 25]},
+                {"hora": [7, 45]},
+                {"hora": [8, 5]},
+                {"hora": [8, 25]},
+                {"hora": [8, 40]},
+                {"esIntervalo": true, "inicio": [9, 5], "fin": [23, 45], "intervalo": 40},
+                {"hora": [24, 30]}
             ],
 
             "festivos": [
