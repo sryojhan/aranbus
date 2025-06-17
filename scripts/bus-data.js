@@ -101,11 +101,15 @@ const BusDataManager = (function () {
 
     const theOneBefore = function(data, direction, day, hour){
 
+        if(!hour) return undefined;
+
         const idx = data[direction][day].indexOf(hour);
         return data[direction][day][idx - 1];
     }
 
     const theOneAfter = function(data, direction, day, hour){
+
+        if(!hour) return undefined;
 
         const idx = data[direction][day].indexOf(hour);
 
@@ -138,11 +142,19 @@ class Hour {
 
     toString() {
 
-        const hour24format = this.hour < 24 ? this.hour : this.hour - 24;
+        const thisDay = this.hour < 24;
 
         let h = this.hour.toString();
+        if(thisDay){
 
-        if (hour24format < 10) h = '0' + h;
+            if(h < 10)
+            {
+                h = '0' + h;
+            }
+
+        }else {
+            h = '0' + (this.hour - 24).toString();
+        }
 
         let m = this.minutes;
 
