@@ -52,7 +52,72 @@
         }
     },
     "l5": {
+        "ida": {
 
+            "origen": "Estación de Aranjuez",
+
+            "laborales": [
+
+                {"esIntervalo": false, "hora": [6, 15], "especial": "Solo desde el 1 de septiembre hasta el 15 de julio"},
+                {"esIntervalo": false, "hora": [7, 45]},
+                {"esIntervalo": false, "hora": [9, 15]},
+                {"esIntervalo": false, "hora": [10, 45]},
+                {"esIntervalo": false, "hora": [12, 15]},
+                {"esIntervalo": false, "hora": [13, 45]},
+                {"esIntervalo": false, "hora": [15, 15]},
+                {"esIntervalo": false, "hora": [16, 45]},
+                {"esIntervalo": false, "hora": [18, 15]},
+                {"esIntervalo": false, "hora": [19, 45]},
+                {"esIntervalo": false, "hora": [21, 15]}
+            ],
+
+            "festivos": [
+
+                {"esIntervalo": false, "hora": [7, 45]},
+                {"esIntervalo": false, "hora": [9, 15]},
+                {"esIntervalo": false, "hora": [10, 45]},
+                {"esIntervalo": false, "hora": [12, 15]},
+                {"esIntervalo": false, "hora": [13, 45]},
+                {"esIntervalo": false, "hora": [15, 15]},
+                {"esIntervalo": false, "hora": [16, 45]},
+                {"esIntervalo": false, "hora": [18, 15]},
+                {"esIntervalo": false, "hora": [19, 45]},
+                {"esIntervalo": false, "hora": [21, 15]}
+            ]
+        },
+        "vuelta":{
+
+            "origen": "Hospital del Tajo",
+
+            "laborales": [
+
+                {"esIntervalo": false, "hora": [6, 45], "especial": "Solo desde el 1 de septiembre hasta el 15 de julio"},
+                {"esIntervalo": false, "hora": [8, 15]},
+                {"esIntervalo": false, "hora": [9, 45]},
+                {"esIntervalo": false, "hora": [11, 15]},
+                {"esIntervalo": false, "hora": [12, 45]},
+                {"esIntervalo": false, "hora": [14, 15]},
+                {"esIntervalo": false, "hora": [15, 45]},
+                {"esIntervalo": false, "hora": [17, 15]},
+                {"esIntervalo": false, "hora": [18, 45]},
+                {"esIntervalo": false, "hora": [20, 15]},
+                {"esIntervalo": false, "hora": [21, 45]}
+            ],
+
+            "festivos": [
+
+                {"esIntervalo": false, "hora": [8, 15]},
+                {"esIntervalo": false, "hora": [9, 45]},
+                {"esIntervalo": false, "hora": [11, 15]},
+                {"esIntervalo": false, "hora": [12, 45]},
+                {"esIntervalo": false, "hora": [14, 15]},
+                {"esIntervalo": false, "hora": [15, 45]},
+                {"esIntervalo": false, "hora": [17, 15]},
+                {"esIntervalo": false, "hora": [18, 45]},
+                {"esIntervalo": false, "hora": [20, 15]},
+                {"esIntervalo": false, "hora": [21, 45]}
+            ]
+        }
     },
     "423":{
 
