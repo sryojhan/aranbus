@@ -5,7 +5,9 @@ const BusDataManager = (function () {
 
     const loadJson = async function () {
 
-        const jsonData = await fetch(window.location.pathname + '/data/bus.json');
+        const basePath = window.location.hostname === 'localhost' ? '' : '/aranbus';
+
+        const jsonData = await fetch(basePath + '/data/bus.json');
         busData = await jsonData.json();
     }
 
