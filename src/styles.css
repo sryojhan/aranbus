@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('./fonts/Poppins-Regular.ttf');
+
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./fonts/Poppins-Medium.ttf');
+
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./fonts/Poppins-Light.ttf');
+
+    font-weight: 300;
+}
+
+
+body{
+
+    padding: 0;
+    margin: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background-color: #151515;
+    color: white;
+
+    font-family: 'Poppins', monospace;
+}
