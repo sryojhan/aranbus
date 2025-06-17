@@ -342,9 +342,8 @@
 
             "festivos": [
 
-                {"esIntervalo": true, "inicio": [7, 15], "fin": [15, 25], "intervalo": 35},
-                {"esIntervalo": true, "inicio": [16, 35], "fin": [24, 10], "intervalo": 35},
-                {"esIntervalo": false, "hora": [25, 10]}
+                {"hora": [6, 25]},
+                {"esIntervalo": true, "inicio": [7, 10], "fin": [24, 30], "intervalo": 40}
             ]
         }
     },
