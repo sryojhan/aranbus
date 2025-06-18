@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Redirecting...</title>
+    <script>
+      // Redirige a index.html conservando la ruta
+      const path = window.location.pathname.replace('/aranbus', '');
+      sessionStorage.setItem('redirectPath', path);
+      window.location.replace('/aranbus/index.html');
+    </script>
+  </head>
+  <body>
+    Redirigiendo...
+  </body>
+</html>

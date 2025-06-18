@@ -1,6 +1,7 @@
 
 const BusDataManager = (function () {
 
+    let initialised = false;
     let busData = null;
 
     const loadJson = async function () {
@@ -9,6 +10,8 @@ const BusDataManager = (function () {
 
         const jsonData = await fetch(basePath + '/data/bus.json');
         busData = await jsonData.json();
+
+        initialised = true;
     }
 
 
@@ -126,7 +129,11 @@ const BusDataManager = (function () {
         return data[direction].sabados !== undefined;
     }
 
-    return { loadJson, parseRoute, getNextBus, getNextBusFromHour, theOneBefore, theOneAfter, hasSaturday };
+    const isDataInitialised = function(){
+        return initialised;
+    }
+
+    return { loadJson, parseRoute, getNextBus, getNextBusFromHour, theOneBefore, theOneAfter, hasSaturday, isDataInitialised };
 })();
 
 class Hour {
